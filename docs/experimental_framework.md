@@ -22,3 +22,7 @@ This document outlines potential experiments to validate the charge routing conc
 - Capture thermal imaging to identify hotspots or dendrite formation.
 
 Future iterations can move from the testbed into formal simulation or hardware.
+
+## Testbed Scripts
+- Initial geometry prototypes are placed in `/_sep/testbed/`.
+- Run `python spiral_demo.py` to generate sample spiral coordinates.
