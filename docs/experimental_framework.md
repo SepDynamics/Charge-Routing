@@ -28,3 +28,5 @@ Future iterations can move from the testbed into formal simulation or hardware.
 - Run `python spiral_demo.py` to generate sample spiral coordinates.
 - Run `python spiral_network.py` to evaluate a simple resistor-network
   model of the spiral geometry.
+- Run `python spiral_sweep.py` to assess potential uniformity across
+  different spiral sizes and cross-link configurations.
