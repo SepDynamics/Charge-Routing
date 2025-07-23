@@ -34,3 +34,5 @@ Future iterations can move from the testbed into formal simulation or hardware.
   metrics.
 - Run `python spiral_impedance.py` to compute the effective
   resistance across the spiral under different cross-link settings.
+- Run `python spiral_transient.py` to observe time-based potential
+  equalization in the RC model.

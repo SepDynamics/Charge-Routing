@@ -29,6 +29,15 @@ if ! command -v dot >/dev/null 2>&1; then
   fi
 fi
 
+# ffmpeg for generating animations
+if ! command -v ffmpeg >/dev/null 2>&1; then
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y ffmpeg
+  else
+    echo "ffmpeg not found; install manually if you need animations"
+  fi
+fi
+
 # Ensure shellcheck is available for script linting
 if ! command -v shellcheck >/dev/null 2>&1; then
   if command -v apt-get >/dev/null 2>&1; then
