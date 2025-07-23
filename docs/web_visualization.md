@@ -20,5 +20,5 @@ cd _sep/testbed
 python -m http.server
 ```
 
-Visit `http://localhost:8000/index.html` to see interactive graphs of the
-standard deviation and effective resistance versus spiral turns.
+Visit `http://localhost:8000/index.html` to view interactive graphs along with a
+visualization report summarizing key images from the spiral simulations.
