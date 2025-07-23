@@ -47,4 +47,13 @@ if ! command -v shellcheck >/dev/null 2>&1; then
   fi
 fi
 
+# Node.js for running simple web servers
+if ! command -v node >/dev/null 2>&1; then
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y nodejs npm
+  else
+    echo "nodejs not found; install manually if you need local servers"
+  fi
+fi
+
 echo "Environment setup complete."

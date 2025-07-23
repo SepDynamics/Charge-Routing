@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Charge Routing Testbed</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body { font-family: sans-serif; margin: 2em; }
+canvas { max-width: 600px; margin-bottom: 2em; }
+</style>
+</head>
+<body>
+<h1>Charge Routing Testbed</h1>
+<p>This page visualizes sample results from the spiral prototype simulations.</p>
+<canvas id="uniformityChart"></canvas>
+<canvas id="resistanceChart"></canvas>
+<script>
+async function loadTSV(path) {
+  const text = await fetch(path).then(r => r.text());
+  return text.trim().split(/\n+/).slice(1).map(line => {
+    const [turns, cross, val] = line.split(/\s+/).map(Number);
+    return {turns, cross, val};
+  });
+}
+async function main() {
+  const sweep = await loadTSV('sweep_data.tsv');
+  const imp = await loadTSV('impedance_data.tsv');
+  const labels = [...new Set(sweep.map(d => d.turns))];
+  const noCross = sweep.filter(d => !d.cross).map(d => d.val);
+  const withCross = sweep.filter(d => d.cross).map(d => d.val);
+  new Chart(document.getElementById('uniformityChart').getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {label: 'No Cross', data: noCross, borderColor: 'blue', fill: false},
+        {label: 'With Cross', data: withCross, borderColor: 'red', fill: false}
+      ]
+    },
+    options: { plugins: { title: { display: true, text: 'Potential StdDev vs Turns' } } }
+  });
+  const resNoCross = imp.filter(d => !d.cross).map(d => d.val);
+  const resWithCross = imp.filter(d => d.cross).map(d => d.val);
+  new Chart(document.getElementById('resistanceChart').getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {label: 'No Cross', data: resNoCross, borderColor: 'green', fill: false},
+        {label: 'With Cross', data: resWithCross, borderColor: 'orange', fill: false}
+      ]
+    },
+    options: { plugins: { title: { display: true, text: 'Effective Resistance vs Turns' } } }
+  });
+}
+main();
+</script>
+</body>
+</html>
