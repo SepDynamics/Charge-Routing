@@ -10,3 +10,5 @@ Scripts:
   with a midpoint cross-link.
 - `spiral_sweep.py` – sweeps over turn counts and reports potential
   uniformity with and without the midpoint cross connection.
+- `spiral_stats.py` – computes average uniformity from the sweep
+  results.
