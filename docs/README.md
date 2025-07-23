@@ -8,5 +8,6 @@ This folder collects research notes and experimental plans related to the self-r
 - `transient_simulation.md` — notes on the RC transient model.
 - `../_sep/testbed` — contains prototype scripts and experiments
   (including parameter sweeps with `spiral_sweep.py`).
+- `web_visualization.md` — instructions for viewing the HTML results page.
 
 Use this directory to record results and hypotheses as development progresses.

@@ -1,0 +1,2 @@
+Average stddev with cross: 0.332243847518106
+Average stddev without cross: 0.30830279362337115
