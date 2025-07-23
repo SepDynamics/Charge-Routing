@@ -32,3 +32,5 @@ Future iterations can move from the testbed into formal simulation or hardware.
   different spiral sizes and cross-link configurations.
 - Run `python spiral_stats.py` to summarize average uniformity
   metrics.
+- Run `python spiral_impedance.py` to compute the effective
+  resistance across the spiral under different cross-link settings.

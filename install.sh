@@ -20,6 +20,15 @@ if ! command -v gnuplot >/dev/null 2>&1; then
   fi
 fi
 
+# Graphviz for network visualization
+if ! command -v dot >/dev/null 2>&1; then
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y graphviz
+  else
+    echo "graphviz not found; install manually if you need diagrams"
+  fi
+fi
+
 # Ensure shellcheck is available for script linting
 if ! command -v shellcheck >/dev/null 2>&1; then
   if command -v apt-get >/dev/null 2>&1; then
