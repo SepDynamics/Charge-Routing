@@ -26,3 +26,5 @@ Future iterations can move from the testbed into formal simulation or hardware.
 ## Testbed Scripts
 - Initial geometry prototypes are placed in `/_sep/testbed/`.
 - Run `python spiral_demo.py` to generate sample spiral coordinates.
+- Run `python spiral_network.py` to evaluate a simple resistor-network
+  model of the spiral geometry.
