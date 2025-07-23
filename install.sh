@@ -11,4 +11,13 @@ if [ -f requirements.txt ]; then
   pip install -r requirements.txt
 fi
 
+# Ensure shellcheck is available for script linting
+if ! command -v shellcheck >/dev/null 2>&1; then
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y shellcheck
+  else
+    echo "shellcheck not found; please install it manually for linting"
+  fi
+fi
+
 echo "Environment setup complete."
