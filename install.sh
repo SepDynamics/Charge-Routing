@@ -11,6 +11,15 @@ if [ -f requirements.txt ]; then
   pip install -r requirements.txt
 fi
 
+# Optional plotting tool for quick data visualization
+if ! command -v gnuplot >/dev/null 2>&1; then
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update && sudo apt-get install -y gnuplot
+  else
+    echo "gnuplot not found; install manually if you need plotting"
+  fi
+fi
+
 # Ensure shellcheck is available for script linting
 if ! command -v shellcheck >/dev/null 2>&1; then
   if command -v apt-get >/dev/null 2>&1; then

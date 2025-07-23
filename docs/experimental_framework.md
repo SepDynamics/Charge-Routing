@@ -30,3 +30,5 @@ Future iterations can move from the testbed into formal simulation or hardware.
   model of the spiral geometry.
 - Run `python spiral_sweep.py` to assess potential uniformity across
   different spiral sizes and cross-link configurations.
+- Run `python spiral_stats.py` to summarize average uniformity
+  metrics.
