@@ -12,3 +12,4 @@ Scripts:
   uniformity with and without the midpoint cross connection.
 - `spiral_stats.py` – computes average uniformity from the sweep
   results.
+- `spiral_transient.py` – simulates transient RC behavior of the spiral.
