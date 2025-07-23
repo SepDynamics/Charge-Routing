@@ -15,3 +15,8 @@ python _sep/testbed/spiral_network.py
 The program prints the coordinates of each node along with its computed
 potential. This provides a basic sanity check that the geometry evenly
 spreads voltage when the midpoint cross-link is present.
+
+For further exploration, `/_sep/testbed/spiral_sweep.py` performs a
+parameter sweep over different spiral sizes. It reports the standard
+deviation of node potentials with and without the midpoint cross
+connection to quantify uniformity.
