@@ -4,7 +4,7 @@ This folder collects research notes and experimental plans related to the self-r
 
 - `experimental_framework.md` — outlines proposed simulation and physical tests.
 - `analysis_notes.md` — brief exploration of resistor-network modeling.
-- `spiral_results.md` — example results from the testbed parameter sweep.
+- `spiral_results.md` — results from parameter sweeps and impedance tests.
 - `../_sep/testbed` — contains prototype scripts and experiments
   (including parameter sweeps with `spiral_sweep.py`).
 
