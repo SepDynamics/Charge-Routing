@@ -9,5 +9,6 @@ This folder collects research notes and experimental plans related to the self-r
 - `../_sep/testbed` — contains prototype scripts and experiments
   (including parameter sweeps with `spiral_sweep.py`).
 - `web_visualization.md` — instructions for viewing the HTML results page.
+- `research_plan.md` — next steps for validating the concept.
 
 Use this directory to record results and hypotheses as development progresses.
